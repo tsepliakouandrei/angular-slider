@@ -10,7 +10,11 @@ module.exports = function(grunt){
             prod: {
                 src: ['<%= srcFiles %>'],
                 dest: 'build/<%= pkg.name %>.js'
-            }
+            },
+	    css: {
+	    	src: ['src/style.css'],
+                dest: 'build/<%= pkg.name %>.css'
+	    }
         },
         uglify: {
             options: {
@@ -27,7 +31,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'concat:prod']);
+    grunt.registerTask('default', ['uglify', 'concat:prod', 'concat:css']);
 
     grunt.loadNpmTasks('grunt-contrib-concat');
 

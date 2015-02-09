@@ -1243,7 +1243,9 @@ angular.module('vr.directives.slider', ['ngTouch']).directive('slider',
 											
 											if(stretchedHighPercent <= stretchedLowPercent + ptrWidth) {												
 												selInputLeft = stretchedLowPercent;
-												selInputWidth = stretchedHighPercent + ptrWidth - stretchedLowPercent;
+												selInputWidth = 0;
+                                                highInputLeft -= (ptrWidth - (stretchedHighPercent - stretchedLowPercent));
+                                                highInputWidth += (ptrWidth - (stretchedHighPercent - stretchedLowPercent));
 											}
                                             
                                             // set the low input's new width

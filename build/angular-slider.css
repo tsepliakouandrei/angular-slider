@@ -1,0 +1,14 @@
+slider,[slider] input {
+  &.input.selection::-webkit-slider-thumb {
+    display: none;
+  }
+  &.input.selection::-moz-range-thumb {
+    background: none;
+    border: none;
+    width: 0;
+    height: 0;
+  }
+  &.input.selection::-ms-thumb {
+    display: none;
+  }
+}
